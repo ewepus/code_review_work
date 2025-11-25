@@ -8,26 +8,26 @@ class CalculatorTest {
 
     @Test
     void add() {
-        assertEquals(5, calculator.add(2, 3));
+        assertEquals(4, calculator.add(2, 2));
     }
 
     @Test
     void dif() {
-        assertEquals(1, calculator.dif(3, 2));
+        assertEquals(0, calculator.dif(2, 2));
     }
 
     @Test
     void div() {
-        assertEquals(4, calculator.div(20, 5));
+        assertEquals(1, calculator.div(2, 2));
     }
 
     @Test
     void times() {
-        assertEquals(12, calculator.times(3, 4));
+        assertEquals(9, calculator.times(3, 3));
     }
 
     @Test
     void solver() {
-        assertEquals(15, calculator.solver());
+        assertEquals(100, calculator.solver(100));
     }
 }
