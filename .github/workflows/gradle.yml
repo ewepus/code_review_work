@@ -52,11 +52,8 @@ jobs:
         gradle-version: '8.9'
       
     - name: Run tests
-      run: ./gradlew test --info
+      run: ./gradlew test
 
-    - name: Run tests
-      run: ./gradlew test --info
-    
     - name: Test Report
       if: always()
       uses: dorny/test-reporter@v1
