@@ -86,7 +86,7 @@ jobs:
       if: always()
       uses: dorny/test-reporter@v1
       with:
-        name: 'JUnit Test Results'
+        name: JUnit Test Results - Java ${{ matrix.java-version }} on ${{ matrix.os }}
         path: '**/build/test-results/test/*.xml'
         reporter: 'java-junit'
         fail-on-error: false
