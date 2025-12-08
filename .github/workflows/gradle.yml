@@ -46,7 +46,7 @@ jobs:
         gradle-version: '8.9'
         
     - name: Build with Gradle
-      run: ./gradlew assemble
+      run: ./gradlew build
 
   test:
     needs: build
