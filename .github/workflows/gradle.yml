@@ -51,3 +51,17 @@ jobs:
       
     - name: Run tests
       run: ./gradlew test --info
+
+    - name: Run tests
+      run: ./gradlew test --info
+    
+    - name: Test Report
+      if: always()
+      uses: dorny/test-reporter@v1
+      with:
+        name: 'JUnit Test Results'
+        path: '**/build/test-results/test/*.xml'
+        reporter: 'java-junit'
+        fail-on-error: false
+        list-tests: 'always'
+        only-summary: false
